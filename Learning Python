@@ -11,12 +11,13 @@ for numeven in range(1,11):
         
 #Code that take an input value and responds if its prime or not
 print("\nCalling the PrimeCheck function")
-def primecheck(num):
-    print(num, "is Prime = ", end="")
+def primecheck():
+    user_input=int(input("Enter the number to check if its Prime = "))
+    print("is",user_input, "Prime ? = ", end="")
     """Take the value passed and check if its prime and return boolean"""
-    return all(num % i for i in range(2, num))
+    return all(user_input % i for i in range(2, user_input))
 
 """Calling the primecheck function and catching the boolean value in a variable"""
-b=primecheck(5)
+b=primecheck()
 """Printing the value returned by the primecheck function"""
 print(b)
