@@ -1,0 +1,22 @@
+#Code that prints 1 to 10 with comma seperated on the same line
+#print ("1", end="")
+for number in range(2,11):
+    print (number,"," ,end="")
+    
+#Code that prints only even number between 1 to 10
+print ("\n Code that prints only even number between 1 to 10")
+for numeven in range(1,11):
+    if(numeven%2 == 0):
+        print (numeven,",", end="")
+        
+#Code that take an input value and responds if its prime or not
+print("\nCalling the PrimeCheck function")
+def primecheck(num):
+    print(num, "is Prime = ", end="")
+    """Take the value passed and check if its prime and return boolean"""
+    return all(num % i for i in range(2, num))
+
+"""Calling the primecheck function and catching the boolean value in a variable"""
+b=primecheck(5)
+"""Printing the value returned by the primecheck function"""
+print(b)
